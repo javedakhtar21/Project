@@ -197,7 +197,7 @@ const Navber = (props) => {
                                 />
                               </svg>
                             </span>
-                            <span>My Wishlist</span>
+                            <span>My Wishlist 2</span>
                           </span>
                           <span
                             onClick={(e) => history.push("/user/setting")}
