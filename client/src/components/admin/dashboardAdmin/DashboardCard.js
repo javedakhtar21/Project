@@ -14,6 +14,8 @@ const DashboardCard = (props) => {
     <Fragment>
       {/* Card Start */}
       <div className="m-4 grid grid-cols-1 md:grid-cols-4 row-gap-4 col-gap-4">
+        
+        {/* customer card */}
         <div className="flex flex-col justify-center items-center col-span-1 bg-white p-6 shadow-lg hover:shadow-none cursor-pointer transition-all duration-300 ease-in border-b-4 border-opacity-0 hover:border-opacity-100 border-indigo-200">
           <div className="bg-indigo-200 p-2 cursor-pointer rounded-full">
             <svg
@@ -55,6 +57,9 @@ const DashboardCard = (props) => {
             </span>
           </div>
         </div>
+        {/* customer card */}
+
+        {/* orders card */}
         <div className="flex flex-col justify-center items-center col-span-1 bg-white p-6 shadow-lg hover:shadow-none cursor-pointer transition-all duration-300 ease-in border-b-4 border-opacity-0 hover:border-opacity-100 border-red-200">
           <div className="bg-red-200 p-2 cursor-pointer rounded-full">
             <svg
@@ -96,6 +101,9 @@ const DashboardCard = (props) => {
             </span>
           </div>
         </div>
+        {/* orders card */}
+
+        {/* product card */}
         <div className="flex flex-col justify-center items-center col-span-1 bg-white p-6 shadow-lg hover:shadow-none cursor-pointer transition-all duration-300 ease-in border-b-4 border-opacity-0 hover:border-opacity-100 border-green-200">
           <div className="bg-green-200 p-2 cursor-pointer rounded-full">
             <svg
@@ -116,6 +124,9 @@ const DashboardCard = (props) => {
           </div>
           <div className="text-lg font-medium">Product</div>
         </div>
+        {/* product card */}
+
+        {/* category card */}
         <div className="flex flex-col justify-center items-center col-span-1 bg-white p-6 shadow-lg hover:shadow-none cursor-pointer transition-all duration-300 ease-in border-b-4 border-opacity-0 hover:border-opacity-100 border-orange-200">
           <div className="bg-orange-200 p-2 cursor-pointer rounded-full">
             <svg
@@ -139,6 +150,7 @@ const DashboardCard = (props) => {
           <div className="text-lg font-medium">Categories</div>
         </div>
       </div>
+      {/* category card */}
       {/* End Card */}
     </Fragment>
   );

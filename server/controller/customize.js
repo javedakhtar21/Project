@@ -28,7 +28,7 @@ class Customize {
       });
       let save = await newCustomzie.save();
       if (save) {
-        return res.json({ success: "Image upload successfully" });
+        return res.json({ success: "Image uploaded successfully" });
       }
     } catch (err) {
       console.log(err);

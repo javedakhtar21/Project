@@ -43,6 +43,8 @@ export const nextSlide = (totalImg, slide, setSlide) => {
   }
 };
 
+
+//totaimage=10,current image jo dikh rha hai uski value(slide), setslide(+1)
 export const prevSlide = (totalImg, slide, setSlide) => {
   if (slide === 0) {
     setSlide(totalImg - 1);

@@ -31,10 +31,10 @@ class Auth {
     if (!name || !email || !password || !cPassword) {
       error = {
         ...error,
-        name: "Filed must not be empty",
-        email: "Filed must not be empty",
-        password: "Filed must not be empty",
-        cPassword: "Filed must not be empty",
+        name: "Name must not be empty",
+        email: "Email must not be empty",
+        password: "Password must not be empty",
+        cPassword: "Confirm Password must not be empty",
       };
       return res.json({ error });
     }
@@ -47,11 +47,11 @@ class Auth {
         if ((password.length > 255) | (password.length < 8)) {
           error = {
             ...error,
-            password: "Password must be 8 charecter",
+            password: "Password must be 8 character",
             name: "",
             email: "",
           };
-          return res.json({ error });
+          return res.json(error);
         } else {
           // If Email & Number exists in Database then:
           try {
@@ -77,7 +77,7 @@ class Auth {
                 .save()
                 .then((data) => {
                   return res.json({
-                    success: "Account create successfully. Please login",
+                    success: "Account created successfully. Please login",
                   });
                 })
                 .catch((err) => {

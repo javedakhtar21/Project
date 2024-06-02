@@ -19,7 +19,7 @@ class Order {
   async getOrderByUser(req, res) {
     let { uId } = req.body;
     if (!uId) {
-      return res.json({ message: "All filled must be required" });
+      return res.json({ message: "All fields are required" });
     } else {
       try {
         let Order = await orderModel
@@ -46,7 +46,7 @@ class Order {
       !address ||
       !phone
     ) {
-      return res.json({ message: "All filled must be required" });
+      return res.json({ message: "All fields are required" });
     } else {
       try {
         let newOrder = new orderModel({
@@ -70,7 +70,7 @@ class Order {
   async postUpdateOrder(req, res) {
     let { oId, status } = req.body;
     if (!oId || !status) {
-      return res.json({ message: "All filled must be required" });
+      return res.json({ message: "All fields are required" });
     } else {
       let currentOrder = orderModel.findByIdAndUpdate(oId, {
         status: status,
@@ -86,7 +86,7 @@ class Order {
   async postDeleteOrder(req, res) {
     let { oId } = req.body;
     if (!oId) {
-      return res.json({ error: "All filled must be required" });
+      return res.json({ error: "All fields are required" });
     } else {
       try {
         let deleteOrder = await orderModel.findByIdAndDelete(oId);

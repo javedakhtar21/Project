@@ -63,6 +63,7 @@ const Signup = (props) => {
       <div className="text-center text-2xl mb-6">Register</div>
       <form className="space-y-4">
         {data.success ? alert(data.success, "green") : ""}
+
         <div className="flex flex-col">
           <label htmlFor="name">
             Name<span className="text-sm text-gray-600 ml-1">*</span>
@@ -80,11 +81,12 @@ const Signup = (props) => {
             type="text"
             id="name"
             className={`${
-              data.error.name ? "border-red-500" : ""
+              data.error ? "border-red-500" : ""
             } px-4 py-2 focus:outline-none border`}
           />
-          {!data.error ? "" : alert(data.error.name, "red")}
+          {!data.error.name ? "" : alert(data.error.name, "red")}
         </div>
+
         <div className="flex flex-col">
           <label htmlFor="email">
             Email address<span className="text-sm text-gray-600 ml-1">*</span>
@@ -107,6 +109,7 @@ const Signup = (props) => {
           />
           {!data.error ? "" : alert(data.error.email, "red")}
         </div>
+
         <div className="flex flex-col">
           <label htmlFor="password">
             Password<span className="text-sm text-gray-600 ml-1">*</span>
@@ -129,6 +132,7 @@ const Signup = (props) => {
           />
           {!data.error ? "" : alert(data.error.password, "red")}
         </div>
+
         <div className="flex flex-col">
           <label htmlFor="cPassword">
             Confirm password
@@ -152,6 +156,8 @@ const Signup = (props) => {
           />
           {!data.error ? "" : alert(data.error.cPassword, "red")}
         </div>
+
+        {/* remember me and lost password design */}
         <div className="flex flex-col space-y-2 md:flex-row md:justify-between md:items-center">
           <div>
             <input
@@ -163,10 +169,11 @@ const Signup = (props) => {
               Remember me<span className="text-sm text-gray-600">*</span>
             </label>
           </div>
-          <a className="block text-gray-600" href="/">
+          <button  className="block bg-red-500 text-white px-4 py-2 hover:bg-red-700" href="/">
             Lost your password?
-          </a>
+          </button>
         </div>
+        {/* remember me and lost password design */}
         <div
           onClick={(e) => formSubmit()}
           style={{ background: "#303031" }}
