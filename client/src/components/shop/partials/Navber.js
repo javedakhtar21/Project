@@ -31,28 +31,24 @@ const Navber = (props) => {
     <Fragment>
       {/* Navber Section */}
       <nav className="fixed top-0 w-full z-20 shadow-lg lg:shadow-none bg-white">
-        <div className="m-4 md:mx-12 md:my-6 grid grid-cols-4 lg:grid-cols-3">
-          <div className="hidden lg:block col-span-1 flex text-gray-600 mt-1">
+        <div className="m-4 md:mx-12 md:my-6 grid grid-cols-4 lg:grid-cols-3 justify-center items-center">
+          <div className="flex gap-3 w-auto justify-start items-center text-gray-600 col-span-1">
             <span
-              className="hover:bg-gray-200 px-4 py-3 rounded-lg font-light tracking-widest hover:text-gray-800 cursor-pointer"
-              onClick={(e) => history.push("/")}
+              className="hover:bg-pink-500 border px-4 py-3 rounded-lg font-medium tracking-widest hover:text-black hover:font-medium cursor-pointer"
+              onClick={(e) => history.push("/")}y
             >
               Shop
             </span>
+
             <span
-              className="hover:bg-gray-200 px-4 py-3 rounded-lg font-light tracking-widest hover:text-gray-800 cursor-pointer"
-              onClick={(e) => history.push("/blog")}
-            >
-              Blog
-            </span>
-            <span
-              className="hover:bg-gray-200 px-4 py-3 rounded-lg font-light tracking-widest hover:text-gray-800 cursor-pointer"
+              className="hover:bg-pink-500 border px-4 py-3 rounded-lg font-medium tracking-widest hover:text-black hover:font-medium  cursor-pointer"
               onClick={(e) => history.push("/contact-us")}
             >
               Contact
             </span>
           </div>
-          <div className="col-span-2 lg:hidden flex justify-items-stretch	 items-center">
+
+          <div className="col-span-2 lg:hidden flex justify-items-stretch	 items-center border">
             <svg
               onClick={(e) => navberToggleOpen()}
               className="col-span-1 lg:hidden w-8 h-8 cursor-pointer text-gray-600"
@@ -71,31 +67,35 @@ const Navber = (props) => {
             <span
               onClick={(e) => history.push("/")}
               style={{ letterSpacing: "0.10rem" }}
-              className="flex items-left text-center font-bold uppercase text-gray-800 text-2xl cursor-pointer px-2 text-center"
+              className="flex items-left font-bold uppercase text-gray-800 text-2xl cursor-pointer px-2 text-center"
             >
-             Shalini priya
+              Shop Plaza
             </span>
           </div>
+
+          {/* project name */}
           <div
             onClick={(e) => history.push("/")}
             style={{ letterSpacing: "0.70rem" }}
-            className="hidden lg:block flex items-left col-span-1 text-center text-gray-800 font-bold tracking-widest uppercase text-2xl cursor-pointer"
+            className="lg:block flex items-center text-center  col-span-1  text-gray-800 font-bold tracking-widest uppercase text-2xl cursor-pointer"
           >
-            Javed
+            Shop Plaza
           </div>
-          <div className="flex items-right col-span-2 lg:col-span-1 flex justify-end">
-            {/*  WishList Page Button */}
+          {/* project name */}
+
+          {/* wishlist,login,cart container */}
+          <div className="flex items-right col-span-2 lg:col-span-1 justify-end gap-3">
             <div
               onClick={(e) => history.push("/wish-list")}
-              className="hover:bg-gray-200 rounded-lg px-2 py-2 cursor-pointer"
+              className="hover:bg-pink-500 border  rounded-lg px-2 py-2 cursor-pointer"
               title="Wishlist"
             >
               <svg
                 className={`${
                   location.pathname === "/wish-list"
-                    ? "fill-current text-gray-800"
+                    ? "fill-current text-black"
                     : ""
-                } w-8 h-8 text-gray-600 cursor-pointer`}
+                } w-8 h-8 text-gray-600 cursor-pointer hover:text-black`}
                 fill="none"
                 stroke="currentColor"
                 viewBox="0 0 24 24"
@@ -111,12 +111,13 @@ const Navber = (props) => {
             </div>
             {localStorage.getItem("jwt") ? (
               <Fragment>
+                {/* profile icon */}
                 <div
-                  className="userDropdownBtn hover:bg-gray-200 px-2 py-2 rounded-lg relative"
+                  className="userDropdownBtn hover:bg-pink-500 border px-2 py-2 rounded-lg relative"
                   title="Logout"
                 >
                   <svg
-                    className="cursor-pointer w-8 h-8 text-gray-600 hover:text-gray-800"
+                    className="cursor-pointer w-8 h-8 text-gray-600 hover:text-black"
                     fill="none"
                     stroke="currentColor"
                     viewBox="0 0 24 24"
@@ -129,6 +130,8 @@ const Navber = (props) => {
                       d="M5.121 17.804A13.937 13.937 0 0112 16c2.5 0 4.847.655 6.879 1.804M15 10a3 3 0 11-6 0 3 3 0 016 0zm6 2a9 9 0 11-18 0 9 9 0 0118 0z"
                     />
                   </svg>
+                  {/* profile icon */}
+
                   <div className="userDropdown absolute right-0 mt-1 bg-gray-200 rounded">
                     {!isAdmin() ? (
                       <Fragment>
@@ -155,6 +158,7 @@ const Navber = (props) => {
                             </span>
                             <span>My Orders</span>
                           </span>
+
                           <span
                             onClick={(e) => history.push("/user/profile")}
                             className="flex space-x-2 py-2 px-8 hover:bg-gray-400 cursor-pointer"
@@ -177,6 +181,7 @@ const Navber = (props) => {
                             </span>
                             <span>My Account</span>
                           </span>
+
                           <span
                             onClick={(e) => history.push("/wish-list")}
                             className="flex space-x-2 py-2 px-8 hover:bg-gray-400 cursor-pointer"
@@ -197,7 +202,7 @@ const Navber = (props) => {
                                 />
                               </svg>
                             </span>
-                            <span>My Wishlist 2</span>
+                            <span>My Wishlist</span>
                           </span>
                           <span
                             onClick={(e) => history.push("/user/setting")}
@@ -314,7 +319,7 @@ const Navber = (props) => {
               /* Login Modal Button */
               <div
                 onClick={(e) => loginModalOpen()}
-                className="cursor-pointer hover:bg-gray-200 px-2 py-2 rounded-lg"
+                className="cursor-pointer border hover:bg-pink-500 px-2 py-2 rounded-lg"
                 title="Login"
               >
                 <svg
@@ -336,7 +341,7 @@ const Navber = (props) => {
             {/* Cart Modal Button */}
             <div
               onClick={(e) => cartModalOpen()}
-              className="hover:bg-gray-200 px-2 py-2 rounded-lg relative cursor-pointer"
+              className="hover:bg-pink-500 px-2 py-2 border rounded-lg relative cursor-pointer"
               title="Cart"
             >
               <svg
@@ -358,6 +363,7 @@ const Navber = (props) => {
               </span>
             </div>
           </div>
+          {/* wishlist,login,cart container */}
         </div>
         <div
           className={
@@ -373,12 +379,7 @@ const Navber = (props) => {
             >
               Shop
             </span>
-            <span
-              className="font-medium text-lg tracking-widest hover:text-gray-800 hover:bg-gray-200 px-3 py-2 rounded-lg cursor-pointer"
-              onClick={(e) => history.push("/blog")}
-            >
-              Blog
-            </span>
+
             <span
               className="font-medium text-lg tracking-widest hover:text-gray-800 hover:bg-gray-200 px-3 py-2 rounded-lg cursor-pointer"
               onClick={(e) => history.push("/contact-us")}

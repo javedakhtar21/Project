@@ -63,7 +63,7 @@ const AllProduct = ({ products }) => {
                     src={`${apiURL}/uploads/products/${item.pImages[0]}`}
                     alt=""
                   />
-                  <div className="flex items-center justify-between mt-2">
+                  <div className="flex items-center justify-between mt-2 bg-pink-500">
                     <div className="text-gray-600 font-light truncate">
                       {item.pName}
                     </div>

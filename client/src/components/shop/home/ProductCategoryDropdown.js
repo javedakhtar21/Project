@@ -30,7 +30,7 @@ const CategoryList = () => {
   return (
     <div className={`${data.categoryListDropdown ? "" : "hidden"} my-4`}>
       <hr />
-      <div className="py-1 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+      <div className="py-1 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 bg-gray-300">
         {categories && categories.length > 0 ? (
           categories.map((item, index) => {
             return (
@@ -39,9 +39,10 @@ const CategoryList = () => {
                   onClick={(e) =>
                     history.push(`/products/category/${item._id}`)
                   }
-                  className="col-span-1 m-2 flex flex-col items-center justify-center space-y-2 cursor-pointer"
+                  className="hover:border-pink-500 border-2 p-2 col-span-1 m-2 flex flex-col items-center justify-center cursor-pointer"
                 >
                   <img
+                  className="h-24 w-24"
                     src={`${apiURL}/uploads/categories/${item.cImage}`}
                     alt="pic"
                   />
@@ -101,7 +102,7 @@ const FilterList = () => {
   };
 
   return (
-    <div className={`${data.filterListDropdown ? "" : "hidden"} my-4`}>
+    <div className={`${data.filterListDropdown ? "" : "hidden"} my-4 bg-gray-300 p-4`}>
       <hr />
       <div className="w-full flex flex-col">
         <div className="font-medium py-2">Filter by price</div>
@@ -109,7 +110,7 @@ const FilterList = () => {
           <div className="flex flex-col space-y-2  w-2/3 lg:w-2/4">
             <label htmlFor="points" className="text-sm">
               Price (between 0 and 10$):{" "}
-              <span className="font-semibold text-yellow-700">{range}.00$</span>{" "}
+              <span className="font-semibold text-pink-500">{range}.00$</span>{" "}
             </label>
             <input
               value={range}
@@ -124,7 +125,7 @@ const FilterList = () => {
           </div>
           <div onClick={(e) => closeFilterBar()} className="cursor-pointer">
             <svg
-              className="w-8 h-8 text-gray-700 hover:bg-gray-200 rounded-full p-1"
+              className="w-8 h-8 text-gray-700 hover:bg-pink-500 rounded-full p-1"
               fill="none"
               stroke="currentColor"
               viewBox="0 0 24 24"
@@ -185,18 +186,18 @@ const Search = () => {
     <div
       className={`${
         data.searchDropdown ? "" : "hidden"
-      } my-4 flex items-center justify-between`}
+      } my-4 flex items-center justify-between bg-gray-300 p-4`}
     >
       <input
         value={search}
         onChange={(e) => searchHandle(e)}
-        className="px-4 text-xl py-4 focus:outline-none"
+        className="px-2 text-xl w-full py-1 focus:outline-none border focus:border-pink-500"
         type="text"
         placeholder="Search products..."
       />
       <div onClick={(e) => closeSearchBar()} className="cursor-pointer">
         <svg
-          className="w-8 h-8 text-gray-700 hover:bg-gray-200 rounded-full p-1"
+          className="w-8 h-8 text-black hover:bg-pink-500 rounded-full p-1"
           fill="none"
           stroke="currentColor"
           viewBox="0 0 24 24"

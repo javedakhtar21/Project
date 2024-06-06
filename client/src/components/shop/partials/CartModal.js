@@ -68,14 +68,14 @@ const CartModal = () => {
         } fixed z-40 inset-0 flex items-start justify-end`}
       >
         <div
-          style={{ background: "#303031" }}
-          className="w-full md:w-5/12 lg:w-4/12 h-full flex flex-col justify-between"
+          
+          className="w-full md:w-5/12 lg:w-4/12 h-full flex flex-col justify-between bg-pink-300"
         >
           <div className="overflow-y-auto">
             <div className="border-b border-gray-700 flex justify-between">
-              <div className="p-4 text-white text-lg font-semibold">Cart</div>
+              <div className="p-4 text-black text-lg font-semibold">Cart</div>
               {/* Cart Modal Close Button */}
-              <div className="p-4 text-white">
+              <div className="p-4 hover:text-white hover:bg-black rounded-lg">
                 <svg
                   onClick={(e) => cartModalOpen()}
                   className="w-6 h-6 cursor-pointer"
@@ -105,22 +105,22 @@ const CartModal = () => {
                           alt="cartProduct"
                         />
                         <div className="relative w-full flex flex-col">
-                          <div className="my-2">{item.pName}</div>
+                          <div className="my-2 text-black">{item.pName}</div>
                           <div className="flex items-center justify-between">
                             <div className="flex items-center justify-between space-x-2">
-                              <div className="text-sm text-gray-400">
+                              <div className="text-sm text-black font-semibold">
                                 Quantity :
                               </div>
                               <div className="flex items-end">
-                                <span className="text-sm text-gray-200">
+                                <span className="text-sm text-black">
                                   {quantity(item._id)}
                                 </span>
                               </div>
                             </div>
-                            <div>
+                            <div className="text-black">
                               {" "}
-                              <span className="text-sm text-gray-400">
-                                Subtotoal :
+                              <span className="text-sm font-semibold text-black">
+                                SubTotal :
                               </span>{" "}
                               ${subTotal(item._id, item.pPrice)}.00
                             </div>{" "}
@@ -129,7 +129,7 @@ const CartModal = () => {
                           {/* Cart Product Remove Button */}
                           <div
                             onClick={(e) => removeCartProduct(item._id)}
-                            className="absolute top-0 right-0 text-white"
+                            className="absolute top-0 right-0 text-white rounded-lg hover:bg-black p-2"
                           >
                             <svg
                               className="w-5 h-5 cursor-pointer"
@@ -161,7 +161,7 @@ const CartModal = () => {
           <div className="m-4 space-y-4">
             <div
               onClick={(e) => cartModalOpen()}
-              className="cursor-pointer px-4 py-2 border border-gray-400 text-white text-center cursor-pointer"
+              className="px-4 py-2 border border-black hover:bg-black transition-all duration-300 hover:text-white text-black text-center cursor-pointer"
             >
               Continue shopping
             </div>
@@ -169,7 +169,7 @@ const CartModal = () => {
               <Fragment>
                 {isAuthenticate() ? (
                   <div
-                    className="px-4 py-2 bg-black text-white text-center cursor-pointer"
+                    className="px-4 py-2 border transition-all duration-300 hover:text-black bg-black hover:bg-transparent hover:border-black text-white text-center cursor-pointer"
                     onClick={(e) => {
                       history.push("/checkout");
                       cartModalOpen();

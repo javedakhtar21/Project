@@ -16,14 +16,14 @@ const ProductCategory = (props) => {
             })
           }
           className={`flex items-center space-x-1 cursor-pointer ${
-            data.categoryListDropdown ? "text-yellow-700" : ""
+            data.categoryListDropdown ? "text-pink-500 font-bold" : ""
           }`}
         >
-          <span className="text-md md:text-lg hover:text-yellow-700">
+          <span className="text-md md:text-lg hover:text-pink-500">
             Categories
           </span>
           <svg
-            className="w-4 h-4 text-yellow-700"
+            className="w-4 h-4 "
             fill="none"
             stroke="currentColor"
             viewBox="0 0 24 24"
@@ -46,13 +46,13 @@ const ProductCategory = (props) => {
               })
             }
             className={`flex items-center space-x-1 cursor-pointer ${
-              data.filterListDropdown ? "text-yellow-700" : ""
+              data.filterListDropdown ? "text-pink-500 font-bold" : ""
             }`}
           >
-            <span className="text-md md:text-lg">Filter</span>
+            <span className="text-md md:text-lg hover:text-pink-500">Filter</span>
             <span>
               <svg
-                className="w-4 h-4 text-gray-700 text-yellow-700"
+                className="w-4 h-4 text-gray-700"
                 fill="none"
                 stroke="currentColor"
                 viewBox="0 0 24 24"
@@ -76,13 +76,13 @@ const ProductCategory = (props) => {
               })
             }
             className={`flex items-center space-x-1 cursor-pointer ${
-              data.searchDropdown ? "text-yellow-700" : ""
+              data.searchDropdown ? "text-pink-500 font-bold" : ""
             }`}
           >
-            <span className="text-md md:text-lg">Search</span>
+            <span className="text-md md:text-lg hover:text-pink-500">Search</span>
             <span>
               <svg
-                className="w-4 h-4 text-gray-700 text-yellow-700"
+                className="w-4 h-4 text-gray-700"
                 fill="none"
                 stroke="currentColor"
                 viewBox="0 0 24 24"

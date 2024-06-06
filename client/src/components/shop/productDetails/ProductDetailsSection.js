@@ -368,8 +368,8 @@ const ProductDetailsSection = (props) => {
                   {layoutData.inCart !== null &&
                   layoutData.inCart.includes(sProduct._id) === true ? (
                     <div
-                      style={{ background: "#303031" }}
-                      className={`px-4 py-2 text-white text-center cursor-not-allowed uppercase opacity-75`}
+                      
+                      className={`px-4 py-2 bg-pink-500 text-black text-center cursor-not-allowed uppercase opacity-75`}
                     >
                       In cart
                     </div>
@@ -387,8 +387,8 @@ const ProductDetailsSection = (props) => {
                           totalCost
                         )
                       }
-                      style={{ background: "#303031" }}
-                      className={`px-4 py-2 text-white text-center cursor-pointer uppercase`}
+                      
+                      className={`px-4 py-2 transition-all duration-500 hover:text-white bg-pink-400 hover:bg-black text-center cursor-pointer uppercase`}
                     >
                       Add to cart
                     </div>
