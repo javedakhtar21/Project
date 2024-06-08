@@ -63,9 +63,9 @@ const AdminNavber = (props) => {
           <span
             onClick={(e) => history.push("/admin/dashboard")}
             style={{ letterSpacing: "0.10rem" }}
-            className="flex items-left text-center font-bold uppercase text-gray-800 text-2xl cursor-pointer px-2 text-center"
+            className="flex items-left font-bold uppercase text-gray-800 text-2xl cursor-pointer px-2 text-center"
           >
-            Hayroo
+            Shop Plaza
           </span>
         </div>
         {/* Both Screen show */}
@@ -145,7 +145,7 @@ const AdminNavber = (props) => {
                   </span>
                   <span>Shop</span>
                 </span>
-                <span className="flex space-x-1 py-2 px-8 hover:bg-gray-400 cursor-pointer">
+                {/* <span className="flex space-x-1 py-2 px-8 hover:bg-gray-400 cursor-pointer">
                   <span>
                     <svg
                       className="w-6 h-6"
@@ -169,7 +169,7 @@ const AdminNavber = (props) => {
                     </svg>
                   </span>
                   <span>Setting</span>
-                </span>
+                </span> */}
                 <span
                   onClick={(e) => logout()}
                   className="flex space-x-1 py-2 px-8 hover:bg-gray-400 cursor-pointer"

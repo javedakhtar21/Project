@@ -15,6 +15,7 @@ class Auth {
     }
   }
 
+
   async allUser(req, res) {
     try {
       let allUser = await userModel.find({});
@@ -71,7 +72,7 @@ class Auth {
                 email,
                 password,
                 // ========= Here role 1 for admin signup role 0 for customer signup =========
-                userRole: 1, // Field Name change to userRole from role
+                userRole: 0, // Field Name change to userRole from role
               });
               newUser
                 .save()

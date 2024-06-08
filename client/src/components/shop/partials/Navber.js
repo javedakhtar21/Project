@@ -34,14 +34,14 @@ const Navber = (props) => {
         <div className="m-4 md:mx-12 md:my-6 grid grid-cols-4 lg:grid-cols-3 justify-center items-center">
           <div className="flex gap-3 w-auto justify-start items-center text-gray-600 col-span-1">
             <span
-              className="hover:bg-pink-500 border px-4 py-3 rounded-lg font-medium tracking-widest hover:text-black hover:font-medium cursor-pointer"
+              className="hover:bg-pink-500 border transition-all duration-300 px-4 py-3 rounded-lg font-medium tracking-widest hover:text-black hover:font-medium cursor-pointer"
               onClick={(e) => history.push("/")}y
             >
               Shop
             </span>
 
             <span
-              className="hover:bg-pink-500 border px-4 py-3 rounded-lg font-medium tracking-widest hover:text-black hover:font-medium  cursor-pointer"
+              className="hover:bg-pink-500 transition-all duration-300 border px-4 py-3 rounded-lg font-medium tracking-widest hover:text-black hover:font-medium  cursor-pointer"
               onClick={(e) => history.push("/contact-us")}
             >
               Contact
@@ -87,7 +87,7 @@ const Navber = (props) => {
           <div className="flex items-right col-span-2 lg:col-span-1 justify-end gap-3">
             <div
               onClick={(e) => history.push("/wish-list")}
-              className="hover:bg-pink-500 border  rounded-lg px-2 py-2 cursor-pointer"
+              className="hover:bg-pink-500 border transition-all duration-300  rounded-lg px-2 py-2 cursor-pointer"
               title="Wishlist"
             >
               <svg
@@ -113,7 +113,7 @@ const Navber = (props) => {
               <Fragment>
                 {/* profile icon */}
                 <div
-                  className="userDropdownBtn hover:bg-pink-500 border px-2 py-2 rounded-lg relative"
+                  className="userDropdownBtn hover:bg-pink-500 transition-all duration-300 border px-2 py-2 rounded-lg relative"
                   title="Logout"
                 >
                   <svg
@@ -319,7 +319,7 @@ const Navber = (props) => {
               /* Login Modal Button */
               <div
                 onClick={(e) => loginModalOpen()}
-                className="cursor-pointer border hover:bg-pink-500 px-2 py-2 rounded-lg"
+                className="cursor-pointer border hover:bg-pink-500 transition-all duration-300 px-2 py-2 rounded-lg"
                 title="Login"
               >
                 <svg
