@@ -23,7 +23,6 @@ const ProfileComponent = () => {
       email: userDetails.email,
       phone: userDetails.phoneNumber,
     });
-console.log('fdata',fData);
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [userDetails]);
 

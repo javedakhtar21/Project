@@ -65,7 +65,6 @@ const Routes = () => {
           path="/user/profile"
           component={UserProfile}
         />
-        <Route component={UserProfile} path="/user/profile" />
         <ProtectedRoute
           exact={true}
           path="/user/orders"

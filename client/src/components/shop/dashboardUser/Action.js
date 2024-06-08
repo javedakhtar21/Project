@@ -63,7 +63,7 @@ export const updatePersonalInformationAction = async (dispatch, fData) => {
         dispatch({ type: "loading", payload: false });
         fetchData(dispatch);
       }
-    }, 1000);
+    }, 500);
   } catch (error) {
     console.log(error);
   }

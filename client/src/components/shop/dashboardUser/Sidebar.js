@@ -31,7 +31,7 @@ const Sidebar = (props) => {
             />
           </svg>
           <div className="flex flex-col w-full">
-            <span className="text-sm">Hello</span>
+            <span className="text-sm">Hello,</span>
             <span className="text-lg">
               {data.userDetails ? data.userDetails.name : ""}
             </span>
