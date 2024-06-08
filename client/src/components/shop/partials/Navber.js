@@ -137,6 +137,29 @@ const Navber = (props) => {
                       <Fragment>
                         <li className="flex flex-col text-gray-700 w-48 shadow-lg">
                           <span
+                            onClick={(e) => history.push("/user/profile")}
+                            className="flex space-x-2 py-2 px-8 hover:bg-gray-400 cursor-pointer"
+                          >
+                            <span>
+                              <svg
+                                className="w-6 h-6"
+                                fill="none"
+                                stroke="currentColor"
+                                viewBox="0 0 24 24"
+                                xmlns="http://www.w3.org/2000/svg"
+                              >
+                                <path
+                                  strokeLinecap="round"
+                                  strokeLinejoin="round"
+                                  strokeWidth={2}
+                                  d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"
+                                />
+                              </svg>
+                            </span>
+                            <span>My Profile</span>
+                          </span>
+
+                          <span
                             onClick={(e) => history.push("/user/orders")}
                             className="flex space-x-2 py-2 px-8 hover:bg-gray-400 cursor-pointer"
                           >
@@ -157,29 +180,6 @@ const Navber = (props) => {
                               </svg>
                             </span>
                             <span>My Orders</span>
-                          </span>
-
-                          <span
-                            onClick={(e) => history.push("/user/profile")}
-                            className="flex space-x-2 py-2 px-8 hover:bg-gray-400 cursor-pointer"
-                          >
-                            <span>
-                              <svg
-                                className="w-6 h-6"
-                                fill="none"
-                                stroke="currentColor"
-                                viewBox="0 0 24 24"
-                                xmlns="http://www.w3.org/2000/svg"
-                              >
-                                <path
-                                  strokeLinecap="round"
-                                  strokeLinejoin="round"
-                                  strokeWidth={2}
-                                  d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"
-                                />
-                              </svg>
-                            </span>
-                            <span>My Account</span>
                           </span>
 
                           <span

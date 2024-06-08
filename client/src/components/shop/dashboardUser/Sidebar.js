@@ -38,6 +38,19 @@ const Sidebar = (props) => {
           </div>
         </div>
         <div className="shadow hidden md:block w-full flex flex-col">
+          
+          <hr />
+          <div
+            onClick={(e) => history.push("/user/profile")}
+            className={`${
+              location.pathname === "/user/profile"
+                ? "border-r-4 border-yellow-700 bg-gray-200"
+                : ""
+            }  px-4 py-4 hover:bg-gray-200 cursor-pointer`}
+          >
+            My Profile
+          </div>
+          
           <div
             onClick={(e) => history.push("/user/orders")}
             className={`${
@@ -48,17 +61,7 @@ const Sidebar = (props) => {
           >
             My Orders
           </div>
-          <hr />
-          <div
-            onClick={(e) => history.push("/user/profile")}
-            className={`${
-              location.pathname === "/user/profile"
-                ? "border-r-4 border-yellow-700 bg-gray-200"
-                : ""
-            }  px-4 py-4 hover:bg-gray-200 cursor-pointer`}
-          >
-            My Accounts
-          </div>
+
           <hr />
           <div
             onClick={(e) => history.push("/wish-list")}
