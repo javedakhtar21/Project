@@ -6,18 +6,19 @@ import Layout, { DashboardUserContext } from "./Layout";
 const apiURL = process.env.REACT_APP_API_URL;
 
 const TableHeader = () => {
+  const tableHeaderCss= "px-4 py-2 border bg-pink-500 text-black";
   return (
     <Fragment>
       <thead>
         <tr>
-          <th className="px-4 py-2 border">Products</th>
-          <th className="px-4 py-2 border">Status</th>
-          <th className="px-4 py-2 border">Total</th>
-          <th className="px-4 py-2 border">Phone</th>
-          <th className="px-4 py-2 border">Address</th>
-          <th className="px-4 py-2 border">Transaction Id</th>
-          <th className="px-4 py-2 border">Checkout</th>
-          <th className="px-4 py-2 border">Processing</th>
+          <th className={tableHeaderCss}>Products</th>
+          <th className={tableHeaderCss}>Status</th>
+          <th className={tableHeaderCss}>Total</th>
+          <th className={tableHeaderCss}>Phone</th>
+          <th className={tableHeaderCss}>Address</th>
+          <th className={tableHeaderCss}>Transaction Id</th>
+          <th className={tableHeaderCss}>Checkout</th>
+          <th className={tableHeaderCss}>Processing</th>
         </tr>
       </thead>
     </Fragment>
@@ -122,7 +123,7 @@ const OrdersComponent = () => {
     <Fragment>
       <div className="flex flex-col w-full my-4 md:my-0 md:w-9/12 md:px-8">
         <div className="border">
-          <div className="py-4 px-4 text-lg font-semibold border-t-2 border-yellow-700">
+          <div className="py-4 px-4 text-lg font-semibold border-t-4 border-pink-500">
             Orders
           </div>
           <hr />

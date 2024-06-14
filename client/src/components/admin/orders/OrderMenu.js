@@ -13,8 +13,7 @@ const OrderMenu = (props) => {
         <div className="flex flex-col space-y-4 md:flex-row md:justify-between md:items-center md:space-y-0 w-full">
           {/* It's open the add order modal */}
           <div
-            style={{ background: "#303031" }}
-            className="relative rounded-full text-gray-100 text-sm font-semibold uppercase"
+            className="relative rounded-full  text-sm font-semibold uppercase hover:bg-pink-500 hover:text-white bg-black text-white transition-all duration-300"
           >
             <div
               onClick={(e) => setDropdown(!dropdown)}
@@ -40,7 +39,7 @@ const OrderMenu = (props) => {
                 onClick={(e) =>
                   filterOrder("All", data, dispatch, dropdown, setDropdown)
                 }
-                className="px-4 py-2 hover:bg-black text-center cursor-pointer"
+                className="px-4 py-2 text-center cursor-pointer hover:bg-pink-500 hover:text-white bg-black text-white transition-all duration-300"
               >
                 All
               </span>
@@ -54,7 +53,7 @@ const OrderMenu = (props) => {
                     setDropdown
                   )
                 }
-                className="px-4 py-2 hover:bg-black text-center cursor-pointer"
+                className="px-4 py-2  text-center cursor-pointer hover:bg-pink-500 hover:text-white bg-black text-white transition-all duration-300"
               >
                 Not processed
               </span>
@@ -68,7 +67,7 @@ const OrderMenu = (props) => {
                     setDropdown
                   )
                 }
-                className="px-4 py-2 hover:bg-black text-center cursor-pointer"
+                className="px-4 py-2 hover:bg-pink-500 hover:text-white bg-black text-white transition-all duration-300 text-center cursor-pointer"
               >
                 Processing
               </span>
@@ -76,7 +75,7 @@ const OrderMenu = (props) => {
                 onClick={(e) =>
                   filterOrder("Shipped", data, dispatch, dropdown, setDropdown)
                 }
-                className="px-4 py-2 hover:bg-black text-center cursor-pointer"
+                className="px-4 py-2 hover:bg-pink-500 hover:text-white bg-black text-white transition-all duration-300 text-center cursor-pointer"
               >
                 Shipped
               </span>
@@ -90,7 +89,7 @@ const OrderMenu = (props) => {
                     setDropdown
                   )
                 }
-                className="px-4 py-2 hover:bg-black text-center cursor-pointer"
+                className="px-4 py-2 hover:bg-pink-500 hover:text-white bg-black text-white transition-all duration-300k text-center cursor-pointer"
               >
                 Delivered
               </span>
@@ -104,7 +103,7 @@ const OrderMenu = (props) => {
                     setDropdown
                   )
                 }
-                className="px-4 py-2 hover:bg-black text-center cursor-pointer"
+                className="px-4 py-2 hover:bg-pink-500 hover:text-white bg-black text-white transition-all duration-300 text-center cursor-pointer"
               >
                 Cancelled
               </span>

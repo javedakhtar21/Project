@@ -18,6 +18,7 @@ router.get("/all-product", productController.getAllProduct);
 router.post("/product-by-category", productController.getProductByCategory);
 router.post("/product-by-price", productController.getProductByPrice);
 router.post("/wish-product", productController.getWishProduct);
+//this(/cart-product) route is handled in server\controller\products.js
 router.post("/cart-product", productController.getCartProduct);
 
 router.post("/add-product", upload.any(), productController.postAddProduct);

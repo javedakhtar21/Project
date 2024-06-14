@@ -54,7 +54,7 @@ const ProfileComponent = () => {
     <Fragment>
       <div className="flex flex-col w-full my-4 md:my-0 md:w-9/12 md:px-8">
         <div className="shadow-lg border">
-          <div className="py-4 px-4 text-lg font-semibold border-t-2 border-yellow-700">
+          <div className="py-4 px-4 text-lg font-semibold border-t-4 border-pink-500">
             Personal Information
           </div>
           <hr />
@@ -73,7 +73,7 @@ const ProfileComponent = () => {
                 value={fData.name}
                 type="text"
                 id="name"
-                className="border px-4 py-2 w-full focus:outline-none"
+                className="border focus:border-pink-500 px-4 py-2 w-full focus:outline-none"
               />
             </div>
             <div className="flex flex-col space-y-2">
@@ -83,7 +83,7 @@ const ProfileComponent = () => {
                 readOnly
                 type="email"
                 id="email"
-                className="cursor-not-allowed border px-4 py-2 bg-gray-200 w-full focus:outline-none focus:cursor-not-allowed"
+                className="cursor-not-allowed border focus:border-pink-500 px-4 py-2 bg-gray-200 w-full focus:outline-none focus:cursor-not-allowed"
               />
               <span className="text-xs text-gray-500">
                 You can't change your email
@@ -96,13 +96,12 @@ const ProfileComponent = () => {
                 value={fData.phone}
                 type="number"
                 id="number"
-                className="border px-4 py-2 w-full focus:outline-none"
+                className="border px-4 py-2 w-full focus:border-pink-500 focus:outline-none"
               />
             </div>
             <div
               onClick={(e) => handleSubmit()}
-              style={{ background: "#303031" }}
-              className="w-full text-center cursor-pointer px-4 py-2 text-gray-100"
+              className="w-full text-center transition-all duration-300 bg-black cursor-pointer hover:bg-pink-500 px-4 py-2 text-white"
             >
               Update Information
             </div>

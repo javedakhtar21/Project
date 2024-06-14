@@ -255,21 +255,25 @@ class Product {
     }
   }
 
+  //used in client\src\components\shop\partials\FetchApi.js
   async getCartProduct(req, res) {
     let { productArray } = req.body;
     if (!productArray) {
-      return res.json({ error: "All filled must be required" });
+      return res.json({ error: "All field are required" });
     } else {
       try {
         let cartProducts = await productModel.find({
           _id: { $in: productArray },
         });
+
         if (cartProducts) {
+          console.log('getcartproduct() from controller/products.js :',cartProducts);
           return res.json({ Products: cartProducts });
         }
       } catch (err) {
         return res.json({ error: "Cart product wrong" });
       }
+
     }
   }
 

@@ -113,11 +113,10 @@ const AddProductDetail = ({ categories }) => {
             </span>
             {/* Close Modal */}
             <span
-              style={{ background: "#303031" }}
               onClick={(e) =>
                 dispatch({ type: "addProductModal", payload: false })
               }
-              className="cursor-pointer text-gray-100 py-2 px-2 rounded-full"
+              className="cursor-pointer py-2 px-2 rounded-full bg-black text-white hover:bg-pink-500 transition-all duration-300"
             >
               <svg
                 className="w-6 h-6"
@@ -151,7 +150,7 @@ const AddProductDetail = ({ categories }) => {
                       pName: e.target.value,
                     })
                   }
-                  className="px-4 py-2 border focus:outline-none"
+                  className="px-4 py-2 border focus:outline-none focus:border-pink-500"
                   type="text"
                 />
               </div>
@@ -168,7 +167,7 @@ const AddProductDetail = ({ categories }) => {
                     })
                   }
                   type="number"
-                  className="px-4 py-2 border focus:outline-none"
+                  className="px-4 py-2 border focus:outline-none focus:border-pink-500"
                   id="price"
                 />
               </div>
@@ -185,7 +184,7 @@ const AddProductDetail = ({ categories }) => {
                     pDescription: e.target.value,
                   })
                 }
-                className="px-4 py-2 border focus:outline-none"
+                className="px-4 py-2 border focus:outline-none focus:border-pink-500"
                 name="description"
                 id="description"
                 cols={5}
@@ -207,7 +206,7 @@ const AddProductDetail = ({ categories }) => {
                 }
                 type="file"
                 accept=".jpg, .jpeg, .png"
-                className="px-4 py-2 border focus:outline-none"
+                className="px-4 py-2 border focus:outline-none focus:border-pink-500"
                 id="image"
                 multiple
               />
@@ -227,7 +226,7 @@ const AddProductDetail = ({ categories }) => {
                     })
                   }
                   name="status"
-                  className="px-4 py-2 border focus:outline-none"
+                  className="px-4 py-2 border focus:outline-none focus:border-pink-500"
                   id="status"
                 >
                   <option name="status" value="Active">
@@ -251,7 +250,7 @@ const AddProductDetail = ({ categories }) => {
                     })
                   }
                   name="status"
-                  className="px-4 py-2 border focus:outline-none"
+                  className="px-4 py-2 border focus:outline-none focus:border-pink-500"
                   id="status"
                 >
                   <option disabled value="">
@@ -283,7 +282,7 @@ const AddProductDetail = ({ categories }) => {
                     })
                   }
                   type="number"
-                  className="px-4 py-2 border focus:outline-none"
+                  className="px-4 py-2 border focus:outline-none focus:border-pink-500"
                   id="quantity"
                 />
               </div>
@@ -300,16 +299,15 @@ const AddProductDetail = ({ categories }) => {
                     })
                   }
                   type="number"
-                  className="px-4 py-2 border focus:outline-none"
+                  className="px-4 py-2 border focus:outline-none focus:border-pink-500"
                   id="offer"
                 />
               </div>
             </div>
             <div className="flex flex-col space-y-1 w-full pb-4 md:pb-6 mt-4">
               <button
-                style={{ background: "#303031" }}
                 type="submit"
-                className="rounded-full bg-gray-800 text-gray-100 text-lg font-medium py-2"
+                className="rounded-full  text-lg font-medium py-2 bg-black text-white hover:bg-pink-500 transition-all duration-300"
               >
                 Create product
               </button>

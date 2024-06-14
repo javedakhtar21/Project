@@ -16,6 +16,7 @@ const Signup = (props) => {
     <div className={`text-sm text-${type}-500`}>{msg}</div>
   );
 
+  //formSubmit() read the data entered by user in input fields and 
   const formSubmit = async () => {
     setData({ ...data, loading: true });
     if (data.cPassword !== data.password) {
@@ -28,6 +29,7 @@ const Signup = (props) => {
       });
     }
     try {
+      //signup() defined in shop/auth/fetchApi.js that sends data to server
       let responseData = await signupReq({
         name: data.name,
         email: data.email,
@@ -60,7 +62,7 @@ const Signup = (props) => {
 
   return (
     <Fragment>
-      <div className="text-center text-2xl mb-6">Register</div>
+      <div className="text-center text-2xl mb-6 font-bold">Sign Up</div>
       <form className="space-y-4">
         {data.success ? alert(data.success, "green") : ""}
 
@@ -82,7 +84,7 @@ const Signup = (props) => {
             id="name"
             className={`${
               data.error ? "border-red-500" : ""
-            } px-4 py-2 focus:outline-none border`}
+            } px-4 py-2 focus:outline-none border focus:border-pink-500`}
           />
           {!data.error.name ? "" : alert(data.error.name, "red")}
         </div>
@@ -105,7 +107,7 @@ const Signup = (props) => {
             id="email"
             className={`${
               data.error.email ? "border-red-500" : ""
-            } px-4 py-2 focus:outline-none border`}
+            } px-4 py-2 focus:outline-none border focus:border-pink-500`}
           />
           {!data.error ? "" : alert(data.error.email, "red")}
         </div>
@@ -128,7 +130,7 @@ const Signup = (props) => {
             id="password"
             className={`${
               data.error.password ? "border-red-500" : ""
-            } px-4 py-2 focus:outline-none border`}
+            } px-4 py-2 focus:outline-none border focus:border-pink-500`}
           />
           {!data.error ? "" : alert(data.error.password, "red")}
         </div>
@@ -152,7 +154,7 @@ const Signup = (props) => {
             id="cPassword"
             className={`${
               data.error.cPassword ? "border-red-500" : ""
-            } px-4 py-2 focus:outline-none border`}
+            } px-4 py-2 focus:outline-none border focus:border-pink-500`}
           />
           {!data.error ? "" : alert(data.error.cPassword, "red")}
         </div>
@@ -169,15 +171,14 @@ const Signup = (props) => {
               Remember me<span className="text-sm text-gray-600">*</span>
             </label>
           </div>
-          <button  className="block bg-red-500 text-white px-4 py-2 hover:bg-red-700" href="/">
+          <button  className="rounded-lg block px-4 py-2 text-white  transition-all duration-500 bg-pink-400 hover:bg-black hover:text-white" href="/">
             Lost your password?
           </button>
         </div>
         {/* remember me and lost password design */}
         <div
           onClick={(e) => formSubmit()}
-          style={{ background: "#303031" }}
-          className="px-4 py-2 text-white text-center cursor-pointer font-medium"
+          className="font-medium text-center cursor-pointer  rounded-lg px-4 py-2 text-white  transition-all duration-500 bg-pink-400 hover:bg-black hover:text-white"
         >
           Create an account
         </div>

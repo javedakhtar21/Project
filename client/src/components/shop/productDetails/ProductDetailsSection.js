@@ -388,7 +388,7 @@ const ProductDetailsSection = (props) => {
                         )
                       }
                       
-                      className={`px-4 py-2 transition-all duration-500 hover:text-white bg-pink-400 hover:bg-black text-center cursor-pointer uppercase`}
+                      className={`px-4 py-2 transition-all duration-500 bg-pink-400 hover:bg-black hover:text-white  text-center cursor-pointer uppercase`}
                     >
                       Add to cart
                     </div>

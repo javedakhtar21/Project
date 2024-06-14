@@ -41,17 +41,17 @@ const AllCategory = (props) => {
         <table className="table-auto border w-full my-2">
           <thead>
             <tr>
-              <th className="px-4 py-2 border">Products</th>
-              <th className="px-4 py-2 border">Status</th>
-              <th className="px-4 py-2 border">Total</th>
-              <th className="px-4 py-2 border">Transaction Id</th>
-              <th className="px-4 py-2 border">Customer</th>
-              <th className="px-4 py-2 border">Email</th>
-              <th className="px-4 py-2 border">Phone</th>
-              <th className="px-4 py-2 border">Address</th>
-              <th className="px-4 py-2 border">Created at</th>
-              <th className="px-4 py-2 border">Updated at</th>
-              <th className="px-4 py-2 border">Actions</th>
+              <th className="px-4 py-2 border bg-pink-500 text-black ">Products</th>
+              <th className="px-4 py-2 border bg-pink-500 text-black">Status</th>
+              <th className="px-4 py-2 border bg-pink-500 text-black">Total</th>
+              <th className="px-4 py-2 border bg-pink-500 text-black">Transaction Id</th>
+              <th className="px-4 py-2 border bg-pink-500 text-black">Customer</th>
+              <th className="px-4 py-2 border bg-pink-500 text-black">Email</th>
+              <th className="px-4 py-2 border bg-pink-500 text-black">Phone</th>
+              <th className="px-4 py-2 border bg-pink-500 text-black">Address</th>
+              <th className="px-4 py-2 border bg-pink-500 text-black">Created at</th>
+              <th className="px-4 py-2 border bg-pink-500 text-black">Updated at</th>
+              <th className="px-4 py-2 border bg-pink-500 text-black">Actions</th>
             </tr>
           </thead>
           <tbody>

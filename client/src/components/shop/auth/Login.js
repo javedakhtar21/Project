@@ -3,9 +3,8 @@ import { loginReq } from "./fetchApi";
 import { LayoutContext } from "../index";
 
 const Login = (props) => {
-  const { data: layoutData, dispatch: layoutDispatch } = useContext(
-    LayoutContext
-  );
+  const { data: layoutData, dispatch: layoutDispatch } =
+    useContext(LayoutContext);
 
   const [data, setData] = useState({
     email: "",
@@ -19,6 +18,7 @@ const Login = (props) => {
   const formSubmit = async () => {
     setData({ ...data, loading: true });
     try {
+      //loginReq() defined in shop/auth/fetchApi.js that sends data to server
       let responseData = await loginReq({
         email: data.email,
         password: data.password,
@@ -42,14 +42,15 @@ const Login = (props) => {
 
   return (
     <Fragment>
-      <div className="text-center text-2xl mb-6">Login</div>
+      <div className="text-center text-2xl mb-6 font-bold underline">Login</div>
       {layoutData.loginSignupError ? (
         <div className="bg-red-200 py-2 px-4 rounded">
-          You need to login for checkout. Haven't created account? Create a new one.
+          You need to login to order. Haven't created account? Create a new one.
         </div>
       ) : (
         ""
       )}
+
       <form className="space-y-4">
         <div className="flex flex-col">
           <label htmlFor="name">
@@ -64,12 +65,11 @@ const Login = (props) => {
             value={data.email}
             type="text"
             id="name"
-            className={`${
-              !data.error ? "" : "border-red-500"
-            } px-4 py-2 focus:outline-none border`}
+            className={`${!data.error ? "" : "border-red-500"} px-4 py-2 focus:outline-none border focus:border-pink-500`}
           />
           {!data.error ? "" : alert(data.error)}
         </div>
+
         <div className="flex flex-col">
           <label htmlFor="password">
             Password<span className="text-sm text-gray-600 ml-1">*</span>
@@ -84,10 +84,11 @@ const Login = (props) => {
             id="password"
             className={`${
               !data.error ? "" : "border-red-500"
-            } px-4 py-2 focus:outline-none border`}
+            } px-4 py-2 focus:outline-none border focus:border-pink-500`}
           />
           {!data.error ? "" : alert(data.error)}
         </div>
+        
         <div className="flex flex-col space-y-2 md:flex-row md:justify-between md:items-center">
           <div>
             <input
@@ -99,14 +100,13 @@ const Login = (props) => {
               Remember me<span className="text-sm text-gray-600">*</span>
             </label>
           </div>
-          <a className="block text-gray-600" href="/">
+          <a className="rounded-lg block px-4 py-2 text-white  transition-all duration-500 bg-pink-400 hover:bg-black hover:text-white" href="/">
             Lost your password?
           </a>
         </div>
         <div
           onClick={(e) => formSubmit()}
-          style={{ background: "#303031" }}
-          className="font-medium px-4 py-2 text-white text-center cursor-pointer"
+          className="font-medium text-center cursor-pointer  rounded-lg px-4 py-2 text-white  transition-all duration-500 bg-pink-400 hover:bg-black hover:text-white"
         >
           Login
         </div>

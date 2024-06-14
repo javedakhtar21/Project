@@ -1,6 +1,7 @@
 import axios from "axios";
 const apiURL = process.env.REACT_APP_API_URL;
 
+//getBrainTreeToken() is called in client\src\components\shop\order\Action.js
 export const getBrainTreeToken = async () => {
   let uId = JSON.parse(localStorage.getItem("jwt")).user._id;
   try {

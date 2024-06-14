@@ -38,7 +38,7 @@ const AdminNavber = (props) => {
           <span
             onClick={(e) => history.push("/admin/dashboard")}
             style={{ letterSpacing: "0.70rem" }}
-            className="flex items-left text-center font-bold uppercase text-gray-800 text-2xl cursor-pointer px-2 text-center"
+            className="flex items-left  font-bold uppercase text-gray-800 text-2xl cursor-pointer px-2 text-center"
           >
             Shop Plaza
           </span>
@@ -70,9 +70,9 @@ const AdminNavber = (props) => {
         </div>
         {/* Both Screen show */}
         <div className="flex items-center">
-          <div className="hover:bg-gray-200 rounded-lg p-2" title="Search">
+          <div className="rounded-lg p-2 hover:bg-pink-500" title="Search">
             <svg
-              className="cursor-pointer w-8 h-8 text-gray-600 hover:text-gray-800"
+              className="cursor-pointer w-8 h-8 text-gray-600 hover:text-gray-800 "
               fill="none"
               stroke="currentColor"
               viewBox="0 0 24 24"
@@ -86,7 +86,7 @@ const AdminNavber = (props) => {
               />
             </svg>
           </div>
-          <div className="hover:bg-gray-200 rounded-lg p-2" title="Search">
+          <div className=" rounded-lg p-2 hover:bg-pink-500" title="Search">
             <svg
               className="cursor-pointer w-8 h-8 text-gray-600 hover:text-gray-800"
               fill="none"
@@ -104,7 +104,7 @@ const AdminNavber = (props) => {
           </div>
           {/* Logout Button Dropdown */}
           <div
-            className="userDropdownBtn hover:bg-gray-200 px-2 py-2 rounded-lg relative"
+            className="userDropdownBtn px-2 py-2 rounded-lg relative hover:bg-pink-500"
             title="Logout"
           >
             <svg

@@ -4,7 +4,7 @@ const SearchFilter = (props) => {
   return (
     <Fragment>
       <div className="rounded-full flex items-center justify-between overflow-hidden">
-        <span style={{ background: "#303031" }} className="py-2 px-3">
+        <span className="py-2 px-3 bg-black text-white ">
           <svg
             className="rounded-l-full w-6 h-6 text-gray-100"
             fill="currentColor"
@@ -20,7 +20,7 @@ const SearchFilter = (props) => {
         </span>
         <input
           placeholder="Transaction id..."
-          className="py-2 px-2 focus:outline-none rounded-r-full w-full"
+          className="py-2 px-2 border focus:outline-none rounded-r-full w-full focus:border-pink-500"
           type="text"
         />
       </div>

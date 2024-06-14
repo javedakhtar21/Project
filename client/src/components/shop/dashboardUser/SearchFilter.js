@@ -4,6 +4,7 @@ const SearchFilter = (props) => {
   return (
     <Fragment>
       <div className="w-full my-4 md:my-0 flex items-start justify-end">
+        Search filter
         <div className="bg-white border w-full md:w-6/12 lg:w-4/12 shadow-lg rounded-r flex items-center">
           <span className="py-2 px-3">
             <svg
@@ -26,7 +27,7 @@ const SearchFilter = (props) => {
           />
           <input
             style={{ background: "#303031" }}
-            className="py-2 px-4 focus:outline-none rounded-r cursor-pointer capitalize  text-gray-100"
+            className="py-2 px-4 focus:outline-none rounded-r cursor-pointer capitalize text-gray-100"
             type="submit"
             defaultValue="search"
           />

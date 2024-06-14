@@ -13,8 +13,7 @@ const Sidebar = (props) => {
     <Fragment>
       <div className="flex flex-col w-full space-y-4 md:w-3/12 font-medium">
         <div
-          style={{ background: "#303031" }}
-          className="flex items-center space-x-2 rounded shadow p-2 text-gray-100"
+          className="flex items-center space-x-2 rounded shadow p-2 bg-black text-white"
         >
           <svg
             className="cursor-pointer w-16 h-16 text-gray-100"
@@ -30,8 +29,8 @@ const Sidebar = (props) => {
               d="M5.121 17.804A13.937 13.937 0 0112 16c2.5 0 4.847.655 6.879 1.804M15 10a3 3 0 11-6 0 3 3 0 016 0zm6 2a9 9 0 11-18 0 9 9 0 0118 0z"
             />
           </svg>
-          <div className="flex flex-col w-full">
-            <span className="text-sm">Hello,</span>
+          <div className="flex items-center w-full justify-between">
+            <span className="text-sm">Hello </span>
             <span className="text-lg">
               {data.userDetails ? data.userDetails.name : ""}
             </span>
@@ -44,9 +43,9 @@ const Sidebar = (props) => {
             onClick={(e) => history.push("/user/profile")}
             className={`${
               location.pathname === "/user/profile"
-                ? "border-r-4 border-yellow-700 bg-gray-200"
+                ? "border-r-4 border-pink-500 bg-gray-200"
                 : ""
-            }  px-4 py-4 hover:bg-gray-200 cursor-pointer`}
+            }  px-4 py-4 hover:bg-pink-300 cursor-pointer`}
           >
             My Profile
           </div>
@@ -55,9 +54,9 @@ const Sidebar = (props) => {
             onClick={(e) => history.push("/user/orders")}
             className={`${
               location.pathname === "/user/orders"
-                ? "border-r-4 border-yellow-700 bg-gray-200"
+                ? "border-r-4 border-pink-500 bg-gray-200"
                 : ""
-            }  px-4 py-4 hover:bg-gray-200 cursor-pointer`}
+            }  px-4 py-4 hover:bg-pink-300 cursor-pointer`}
           >
             My Orders
           </div>
@@ -65,7 +64,7 @@ const Sidebar = (props) => {
           <hr />
           <div
             onClick={(e) => history.push("/wish-list")}
-            className={` px-4 py-4 hover:bg-gray-200 cursor-pointer`}
+            className={` px-4 py-4 hover:bg-pink-300 cursor-pointer`}
           >
             My Wishlist
           </div>
@@ -74,9 +73,9 @@ const Sidebar = (props) => {
             onClick={(e) => history.push("/user/setting")}
             className={`${
               location.pathname === "/user/setting"
-                ? "border-r-4 border-yellow-700 bg-gray-200"
+                ? "border-r-4 border-pink-500 bg-gray-200"
                 : ""
-            }  px-4 py-4 hover:bg-gray-200 cursor-pointer`}
+            }  px-4 py-4 hover:bg-pink-300 cursor-pointer`}
           >
             Setting
           </div>
@@ -85,9 +84,9 @@ const Sidebar = (props) => {
             onClick={(e) => logout()}
             className={`${
               location.pathname === "/admin/dashboard/categories"
-                ? "border-r-4 border-yellow-700 bg-gray-200"
+                ? "border-r-4 border-pink-500 bg-gray-200"
                 : ""
-            }  px-4 py-4 hover:bg-gray-200 cursor-pointer`}
+            }  px-4 py-4 hover:bg-pink-300 cursor-pointer`}
           >
             Logout
           </div>

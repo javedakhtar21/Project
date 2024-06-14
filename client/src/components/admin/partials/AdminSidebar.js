@@ -16,9 +16,9 @@ const AdminSidebar = (props) => {
           onClick={(e) => history.push("/admin/dashboard")}
           className={`${
             location.pathname === "/admin/dashboard"
-              ? "border-r-4 border-gray-800 bg-gray-100"
+              ? "border-r-4 border-pink-500 bg-gray-200"
               : ""
-          } hover:bg-gray-200 cursor-pointer flex flex-col items-center justify-center py-6`}
+          } hover:bg-pink-300 cursor-pointer flex flex-col items-center justify-center py-6`}
         >
           <span>
             <svg
@@ -43,9 +43,9 @@ const AdminSidebar = (props) => {
           onClick={(e) => history.push("/admin/dashboard/categories")}
           className={`${
             location.pathname === "/admin/dashboard/categories"
-              ? "border-r-4 border-gray-800 bg-gray-100"
+              ? "border-r-4 border-pink-500 bg-gray-200"
               : ""
-          } hover:bg-gray-200 cursor-pointer flex flex-col items-center justify-center py-6`}
+          } hover:bg-pink-300 cursor-pointer flex flex-col items-center justify-center py-6`}
         >
           <span>
             <svg
@@ -70,9 +70,9 @@ const AdminSidebar = (props) => {
           onClick={(e) => history.push("/admin/dashboard/products")}
           className={`${
             location.pathname === "/admin/dashboard/products"
-              ? "border-r-4 border-gray-800 bg-gray-100"
+              ? "border-r-4 border-pink-500 bg-gray-200"
               : ""
-          } hover:bg-gray-200 cursor-pointer flex flex-col items-center justify-center py-6`}
+          } hover:bg-pink-300 cursor-pointer flex flex-col items-center justify-center py-6`}
         >
           <span>
             <svg
@@ -97,9 +97,9 @@ const AdminSidebar = (props) => {
           onClick={(e) => history.push("/admin/dashboard/orders")}
           className={`${
             location.pathname === "/admin/dashboard/orders"
-              ? "border-r-4 border-gray-800 bg-gray-100"
+              ? "border-r-4 border-pink-500 bg-gray-200"
               : ""
-          } hover:bg-gray-200 cursor-pointer flex flex-col items-center justify-center py-6`}
+          } hover:bg-pink-300 cursor-pointer flex flex-col items-center justify-center py-6`}
         >
           <span>
             <svg

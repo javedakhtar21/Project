@@ -1,10 +1,14 @@
 import { createOrder } from "./FetchApi";
 
+//fetchData() called in client\src\components\shop\order\CheckoutProducts.js
 export const fetchData = async (cartListProduct, dispatch) => {
   dispatch({ type: "loading", payload: true });
   try {
+    //cartListProduct() defined in client\src\components\shop\partials\FetchApi.js
     let responseData = await cartListProduct();
     if (responseData && responseData.Products) {
+      console.log('responseData: ',responseData);
+      console.log('responseData.products: ',responseData.Products);
       setTimeout(function () {
         dispatch({ type: "cartProduct", payload: responseData.Products });
         dispatch({ type: "loading", payload: false });
@@ -14,16 +18,18 @@ export const fetchData = async (cartListProduct, dispatch) => {
     console.log(error);
   }
 };
-
+//fetchbrainTree() called in client\src\components\shop\order\CheckoutProducts.js
 export const fetchbrainTree = async (getBrainTreeToken, setState) => {
   try {
+    //getBrainTreeToken() defined in client\src\components\shop\order\FetchApi.js
     let responseData = await getBrainTreeToken();
     if (responseData && responseData) {
       setState({
         clientToken: responseData.clientToken,
         success: responseData.success,
       });
-      console.log(responseData);
+      console.log('response data in fetchbraintree(): ',responseData);
+
     }
   } catch (error) {
     console.log(error);

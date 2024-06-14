@@ -25,6 +25,7 @@ export const CheckoutComponent = (props) => {
   });
 
   useEffect(() => {
+    //fetchdata(), fetchbrainTree() are defined in client\src\components\shop\order\Action.js
     fetchData(cartListProduct, dispatch);
     fetchbrainTree(getBrainTreeToken, setState);
 
@@ -48,7 +49,7 @@ export const CheckoutComponent = (props) => {
             d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"
           ></path>
         </svg>
-        Please wait untill finish
+        Please wait...
       </div>
     );
   }
@@ -61,7 +62,8 @@ export const CheckoutComponent = (props) => {
           <div className="md:w-1/2">
             <CheckoutProducts products={data.cartProduct} />
           </div>
-          <div className="w-full order-first md:order-last md:w-1/2">
+          {/* container of delivery address,phone */}
+          <div className="w-full order-first md:order-last md:w-1/2 bg-pink-200">
             {state.clientToken !== null ? (
               <Fragment>
                 <div
@@ -75,6 +77,7 @@ export const CheckoutComponent = (props) => {
                   ) : (
                     ""
                   )}
+
                   <div className="flex flex-col py-2">
                     <label htmlFor="address" className="pb-2">
                       Delivery Address
@@ -94,6 +97,7 @@ export const CheckoutComponent = (props) => {
                       placeholder="Address..."
                     />
                   </div>
+
                   <div className="flex flex-col py-2 mb-2">
                     <label htmlFor="phone" className="pb-2">
                       Phone
@@ -113,6 +117,7 @@ export const CheckoutComponent = (props) => {
                       placeholder="+880"
                     />
                   </div>
+
                   <DropIn
                     options={{
                       authorization: state.clientToken,
@@ -122,6 +127,7 @@ export const CheckoutComponent = (props) => {
                     }}
                     onInstance={(instance) => (state.instance = instance)}
                   />
+                  {/* paynow button */}
                   <div
                     onClick={(e) =>
                       pay(
@@ -134,11 +140,11 @@ export const CheckoutComponent = (props) => {
                         history
                       )
                     }
-                    className="w-full px-4 py-2 text-center text-white font-semibold cursor-pointer"
-                    style={{ background: "#303031" }}
+                    className="bg-black hover:bg-pink-500 transition-all duration-300 w-full px-4 py-2 text-center text-white font-semibold cursor-pointer"
                   >
                     Pay now
                   </div>
+                  {/* paynow button */}
                 </div>
               </Fragment>
             ) : (
@@ -160,6 +166,7 @@ export const CheckoutComponent = (props) => {
               </div>
             )}
           </div>
+          {/* container of delivery address,phone */}
         </div>
       </section>
     </Fragment>

@@ -26,15 +26,17 @@ class Auth {
   }
 
   /* User Registration/Signup controller  */
+  // postSignup() takes the name, email, password, cPassword of user coming from client/shop/auth/fetchApi.js
+    // here postSignup() will validate data of user,checks user exists in database and save data into database
   async postSignup(req, res) {
     let { name, email, password, cPassword } = req.body;
     let error = {};
     if (!name || !email || !password || !cPassword) {
       error = {
         ...error,
-        name: "Name must not be empty",
-        email: "Email must not be empty",
-        password: "Password must not be empty",
+        name: "Field must not be empty",
+        email: "Field must not be empty",
+        password: "Field must not be empty",
         cPassword: "Confirm Password must not be empty",
       };
       return res.json({ error });
@@ -102,20 +104,24 @@ class Auth {
   }
 
   /* User Login/Signin controller  */
+  // email,password coming from client/shop/auth/fetchApi.js
+  // here postSignin() will validate with jwt token and finds and match the email and password entered by user
   async postSignin(req, res) {
     let { email, password } = req.body;
     if (!email || !password) {
       return res.json({
-        error: "Fields must not be empty",
+        error: "Field must not be empty",
       });
     }
     try {
+      //usermodel is the collection in mongodb database that stores the user data
       const data = await userModel.findOne({ email: email });
       if (!data) {
         return res.json({
           error: "Invalid email or password",
         });
       } else {
+        //bcrypt is a library that encrypt password
         const login = await bcrypt.compare(password, data.password);
         if (login) {
           const token = jwt.sign(
@@ -139,5 +145,6 @@ class Auth {
   }
 }
 
+//creating an object
 const authController = new Auth();
 module.exports = authController;

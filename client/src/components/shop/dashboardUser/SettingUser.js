@@ -46,7 +46,7 @@ const SettingComponent = () => {
     <Fragment>
       <div className="flex flex-col w-full my-4 md:my-0 md:w-9/12 md:px-8">
         <div className="shadow-lg border">
-          <div className="py-4 px-4 text-lg font-semibold border-t-2 border-yellow-700">
+          <div className="py-4 px-4 text-lg font-semibold border-t-4 border-pink-500">
             Change Password
           </div>
           <hr />
@@ -73,7 +73,7 @@ const SettingComponent = () => {
                   value={fData.oldPassword}
                   type={fData.type}
                   id="oldPassword"
-                  className="z-10 border px-4 py-2 w-full focus:outline-none"
+                  className="z-10 border focus:border-pink-500 px-4 py-2 w-full focus:outline-none"
                 />
                 <span
                   onClick={(e) =>
@@ -142,7 +142,7 @@ const SettingComponent = () => {
                 value={fData.newPassword}
                 type="password"
                 id="newPassword"
-                className="border px-4 py-2 w-full focus:outline-none"
+                className="border focus:border-pink-500 px-4 py-2 w-full focus:outline-none"
               />
             </div>
             <div className="flex flex-col space-y-2">
@@ -154,13 +154,12 @@ const SettingComponent = () => {
                 value={fData.confirmPassword}
                 type="password"
                 id="confirmPassword"
-                className="border px-4 py-2 w-full focus:outline-none"
+                className="border focus:border-pink-500 px-4 py-2 w-full focus:outline-none"
               />
             </div>
             <div
               onClick={(e) => handleChangePassword(fData, setFdata, dispatch)}
-              style={{ background: "#303031" }}
-              className="w-full text-center cursor-pointer px-4 py-2 text-gray-100"
+              className="w-full bg-black text-center cursor-pointer px-4 py-2 transition-all duration-300 hover:bg-pink-500 text-gray-100"
             >
               Change password
             </div>

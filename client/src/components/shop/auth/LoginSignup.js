@@ -39,6 +39,7 @@ const LoginSignup = (props) => {
           data.loginSignupModal ? "" : "hidden"
         } fixed z-40 inset-0 my-8 md:my-20 flex items-start justify-center overflow-auto`}
       >
+        {/* container for login/signup page */}
         <div className="w-11/12 md:w-3/5 lg:w-2/4 relative space-y-4 bg-white p-6 md:px-12 md:py-6">
           {login ? <Login /> : <Signup />}
           <div className="flex items-center space-x-2">
@@ -48,13 +49,13 @@ const LoginSignup = (props) => {
           </div>
           <div
             onClick={(e) => changeLoginSignup()}
-            style={{ color: "#303031", border: "1px solid #303031" }}
-            className="px-4 py-2 font-medium text-center cursor-pointer"
+            
+            className="font-medium text-center cursor-pointer rounded-lg px-4 py-2 text-white  transition-all duration-500 bg-black hover:bg-pink-500 hover:text-white"
           >
             {loginValue}
           </div>
           {/*  Modal Close Button */}
-          <div className="absolute top-0 right-0 mx-4">
+          <div className="absolute top-0 right-0 mx-4 p-2 hover:bg-black hover:text-white">
             <svg
               onClick={(e) => {
                 loginSignupModalToggle();

@@ -37,11 +37,11 @@ const SellTable = () => {
         <table className="table-auto border w-full my-2">
           <thead>
             <tr>
-              <th className="px-4 py-2 border">Products</th>
-              <th className="px-4 py-2 border">Image</th>
-              <th className="px-4 py-2 border">Status</th>
-              <th className="px-4 py-2 border">Order Address</th>
-              <th className="px-4 py-2 border">Ordered at</th>
+              <th className="px-4 py-2 border bg-pink-500 text-black">Products</th>
+              <th className="px-4 py-2 border bg-pink-500 text-black">Image</th>
+              <th className="px-4 py-2 border bg-pink-500 text-black">Status</th>
+              <th className="px-4 py-2 border bg-pink-500 text-black">Order Address</th>
+              <th className="px-4 py-2 border bg-pink-500 text-black">Ordered at</th>
             </tr>
           </thead>
           <tbody>

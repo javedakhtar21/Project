@@ -89,7 +89,7 @@ const AddCategoryModal = (props) => {
         onClick={(e) => dispatch({ type: "addCategoryModal", payload: false })}
         className={`${
           data.addCategoryModal ? "" : "hidden"
-        } fixed top-0 left-0 z-30 w-full h-full bg-black opacity-50`}
+        } fixed top-0 left-0 z-30 w-full h-full bg-black opacity-50 `}
       />
       {/* End Black Overlay */}
 
@@ -106,11 +106,10 @@ const AddCategoryModal = (props) => {
             </span>
             {/* Close Modal */}
             <span
-              style={{ background: "#303031" }}
               onClick={(e) =>
                 dispatch({ type: "addCategoryModal", payload: false })
               }
-              className="cursor-pointer text-gray-100 py-2 px-2 rounded-full"
+              className="bg-black cursor-pointer text-white py-2 px-2 rounded-full hover:bg-pink-500 transition-all duration-300 "
             >
               <svg
                 className="w-6 h-6"
@@ -143,7 +142,7 @@ const AddCategoryModal = (props) => {
                   })
                 }
                 value={fData.cName}
-                className="px-4 py-2 border focus:outline-none"
+                className="px-4 py-2 border focus:outline-none focus:border-pink-500"
                 type="text"
               />
             </div>
@@ -159,7 +158,7 @@ const AddCategoryModal = (props) => {
                   })
                 }
                 value={fData.cDescription}
-                className="px-4 py-2 border focus:outline-none"
+                className="px-4 py-2 border focus:outline-none focus:border-pink-500"
                 name="description"
                 id="description"
                 cols={5}
@@ -179,7 +178,7 @@ const AddCategoryModal = (props) => {
                     cImage: e.target.files[0],
                   });
                 }}
-                className="px-4 py-2 border focus:outline-none"
+                className="px-4 py-2 border focus:outline-none focus:border-pink-500"
                 type="file"
               />
             </div>
@@ -195,7 +194,7 @@ const AddCategoryModal = (props) => {
                     cStatus: e.target.value,
                   })
                 }
-                className="px-4 py-2 border focus:outline-none"
+                className="px-4 py-2 border focus:outline-none focus:border-pink-500"
                 id="status"
               >
                 <option name="status" value="Active">
@@ -208,9 +207,8 @@ const AddCategoryModal = (props) => {
             </div>
             <div className="flex flex-col space-y-1 w-full pb-4 md:pb-6 mt-4">
               <button
-                style={{ background: "#303031" }}
                 type="submit"
-                className="bg-gray-800 text-gray-100 rounded-full text-lg font-medium py-2"
+                className="rounded-full text-lg font-medium py-2 bg-black text-white hover:bg-pink-500 transition-all duration-300"
               >
                 Create category
               </button>

@@ -57,10 +57,9 @@ const UploadImageSection = () => {
         <h1 className="border-b-2 border-yellow-700 mb-4 pb-2 text-2xl font-semibold">
           Shop Slider Images
         </h1>
-        <div className="relative flex flex-col space-y-2">
+        <div className="relative flex flex-col space-y-2 ">
           <div
-            style={{ background: "#303031" }}
-            className="relative z-0 px-4 py-2 rounded text-white flex justify-center space-x-2 md:w-4/12"
+            className="relative z-0 px-4 py-2 rounded bg-black text-white flex justify-center space-x-2 md:w-4/12 "
           >
             <svg
               className="w-6 h-6"
@@ -82,7 +81,7 @@ const UploadImageSection = () => {
             onChange={(e) => uploadImageHandler(e.target.files[0])}
             name="image"
             accept=".jpg, .png, .jpeg, .gif, .bmp, .tif, .tiff|image/*"
-            className="absolute z-10 opacity-0 bg-gray-100"
+            className="absolute z-10 opacity-0 bg-gray-100 "
             type="file"
             id="image"
           />
@@ -95,7 +94,7 @@ const UploadImageSection = () => {
             })
           }
           style={{ background: "#303031" }}
-          className="cursor-pointer absolute top-0 right-0 m-4 rounded-full p-1"
+          className="cursor-pointer absolute top-0 right-0 m-4 rounded-full p-1 "
         >
           <svg
             className="w-6 h-6 text-white"
